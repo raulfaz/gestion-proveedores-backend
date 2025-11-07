@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.3.final using JasperReports Library version 6.20.3-415f9428cffdb6805c6f85bbb29ebaf18813a2ab  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="proveedores_listado" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="50" bottomMargin="50" uuid="12e962e9-a499-4d96-b29b-1ed44c142af8">
+    <parameter name="TITULO" class="java.lang.String"/>
+    <parameter name="FECHA_GENERACION" class="java.util.Date"/>
+    <field name="id" class="java.lang.Long"/>
+    <field name="ruc" class="java.lang.String"/>
+    <field name="razonSocial" class="java.lang.String"/>
+    <field name="nombreComercial" class="java.lang.String"/>
+    <field name="email" class="java.lang.String"/>
+    <field name="telefono" class="java.lang.String"/>
+    <field name="activo" class="java.lang.Boolean"/>
+    <title>
+        <band height="52" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="0" width="515" height="26" uuid="477e1f28-2d5a-48cd-bd90-aac9d44ce3b5"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="16" isBold="true"/>
+                </textElement>
+                <text><![CDATA[$P{TITULO}]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="0" y="28" width="515" height="18" uuid="3cea9182-4211-4300-86f4-da1ef638724d"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="10" isItalic="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Generado: " + new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm").format($P{FECHA_GENERACION})]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+    <columnHeader>
+        <band height="22" splitType="Stretch">
+            <frame>
+                <reportElement x="0" y="0" width="515" height="22" backcolor="#EEEEEE" uuid="432125b1-7060-4968-aa52-9ad49d552160"/>
+                <staticText>
+                    <reportElement x="0" y="0" width="30" height="22" uuid="259047d4-a268-4c92-84d4-a8f3621a0509"/>
+                    <textElement textAlignment="Center">
+                        <font isBold="true"/>
+                    </textElement>
+                    <text><![CDATA[ID]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="32" y="0" width="70" height="22" uuid="1a5860db-89d5-417a-be09-ef7e5071d1df"/>
+                    <textElement>
+                        <font isBold="true"/>
+                    </textElement>
+                    <text><![CDATA[RUC]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="104" y="0" width="150" height="22" uuid="42a65ebc-cafc-403e-a6f3-e23d18c240ac"/>
+                    <textElement>
+                        <font isBold="true"/>
+                    </textElement>
+                    <text><![CDATA[Razón Social]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="256" y="0" width="110" height="22" uuid="19926fe1-b1de-4c82-820d-3e2a601c79c3"/>
+                    <textElement>
+                        <font isBold="true"/>
+                    </textElement>
+                    <text><![CDATA[Nombre Com.]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="368" y="0" width="90" height="22" uuid="36220468-9c1d-4998-ba83-9b575d9f38c4"/>
+                    <textElement>
+                        <font isBold="true"/>
+                    </textElement>
+                    <text><![CDATA[Email]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="460" y="0" width="55" height="22" uuid="0fc42eb3-b426-4327-91b6-89a88de21d4a"/>
+                    <textElement textAlignment="Center">
+                        <font isBold="true"/>
+                    </textElement>
+                    <text><![CDATA[Activo]]></text>
+                </staticText>
+            </frame>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="16" splitType="Stretch">
+            <textField>
+                <reportElement x="0" y="0" width="30" height="16" uuid="a03ae636-c5ef-41d6-b30d-f0c63b406364"/>
+                <textElement textAlignment="Center">
+                    <font size="9"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="32" y="0" width="70" height="16" uuid="707ddd18-70a2-44e1-97ee-6780d8ef7b7d"/>
+                <textElement>
+                    <font size="9"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{ruc}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="104" y="0" width="150" height="16" uuid="9fe7fca5-9075-4d8e-8525-8247d2c67294"/>
+                <textElement>
+                    <font size="9"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{razonSocial}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="256" y="0" width="110" height="16" uuid="5b764767-dbef-4a84-8f46-ec9550d3cfd2"/>
+                <textElement>
+                    <font size="9"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{nombreComercial}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="368" y="0" width="90" height="16" uuid="e91cce0e-16bf-486e-bbb4-d15d1be392df"/>
+                <textElement>
+                    <font size="9"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="460" y="0" width="55" height="16" uuid="71481679-e096-4688-8a49-9b8cffcc5a05"/>
+                <textElement textAlignment="Center">
+                    <font size="9"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{activo} ? "Sí" : "No"]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <pageFooter>
+        <band height="20" splitType="Stretch">
+            <textField>
+                <reportElement x="0" y="0" width="515" height="20" uuid="93f0a5ac-f659-4668-8486-17abce7d9a56"/>
+                <textElement textAlignment="Right">
+                    <font size="9" isItalic="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+</jasperReport>
