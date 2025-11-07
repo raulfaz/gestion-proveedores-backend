@@ -176,8 +176,9 @@
 
     <pageFooter>
         <band height="20" splitType="Stretch">
+            <!-- footer-left -->
             <textField>
-                <reportElement x="0" y="0" width="260" height="20" uuid="footer-left"/>
+                <reportElement key="footer-left" x="0" y="0" width="260" height="20" uuid="9c1b6b7e-2f8e-41d1-9b8d-1c6e2a3d242f"/>
                 <textElement verticalAlignment="Middle">
                     <font size="8" isItalic="true"/>
                 </textElement>
